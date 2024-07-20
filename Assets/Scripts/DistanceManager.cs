@@ -7,20 +7,27 @@ using UnityEngine.UI;
 public class DistanceManager : MonoBehaviour
 {
     [Header("UI")]
-    public Text playerPickupDistText, playerArmDistText;
+    public Text playerPickupDistText;
+    public Text playerArmDistText;
 
     [Header("Transform Positions")]
-    public Transform armPosition, pickupPosition, playerPosition;
+    public Transform armPosition;
+    public Transform pickupPosition;
+    public Transform playerPosition;
     float playerPickupDist, playerArmDist;
 
-    private void Update()
+    private void Start()
+    {
+        UpdateDistance();
+    }
+    public void UpdateDistance()
     {
         playerPickupDistText.text = "" + FindDistance(pickupPosition, playerPosition);
         playerArmDistText.text = "" + FindDistance(armPosition, playerPosition);
     }
-
     float FindDistance(Transform fromPos, Transform toPos)
     {
-        return Vector2.Distance(fromPos.position, toPos.position);
+        float distance = Vector2.Distance(fromPos.position, toPos.position);
+        return Mathf.Round(distance * 10f) / 10f;
     }
 }
