@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     bool isDead = false;
     bool isHit = false;
+    string currentState;
 
     // Animation States
     const string PLAYER_RUN = "CharacterRun";
@@ -16,13 +17,12 @@ public class Player : MonoBehaviour
 
     Animator animator;
     Rigidbody2D rb;
-
-    string currentState;
-
     DistanceManager distanceManager;
+    GameManager gameManager;
     private void Start()
     {
         distanceManager = FindObjectOfType<DistanceManager>();
+        gameManager = FindObjectOfType<GameManager>();
 
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -59,6 +59,7 @@ public class Player : MonoBehaviour
         {
             isDead = true;
             ChangeAnimationState(PLAYER_DEATH);
+            gameManager.SetGameOver(true);
         }
     }
     // This method checks if the player is grounded
@@ -85,7 +86,6 @@ public class Player : MonoBehaviour
             ChangeAnimationState(PLAYER_DEATH);
         }
     }
-
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
@@ -93,13 +93,11 @@ public class Player : MonoBehaviour
             isGrounded = false;
         }
     }
-
     // if the flame touches the character distance from pick-up to character increases and distance from arms to pick-up reduces.
     void MovePlayer(float pos)
     {
         transform.position = new Vector3(transform.position.x + pos, transform.position.y, transform.position.z);
     }
-
     IEnumerator FlameHit()
     {
         isHit = true;

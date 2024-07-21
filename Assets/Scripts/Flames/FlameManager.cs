@@ -11,8 +11,11 @@ public class FlameManager : MonoBehaviour
 
     private float currentSpawnDelay;
 
+    GameManager gameManager;
     private void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
+
         currentSpawnDelay = initialSpawnDelay;
         GenerateFlameBalls();
     }
@@ -22,7 +25,7 @@ public class FlameManager : MonoBehaviour
     }
     IEnumerator StartGeneratingFlameBalls()
     {
-        while (true)
+        while (!gameManager.IsGameOver() || !gameManager.IsGameWin() || !gameManager.IsPause())
         {
             // Generate a flame ball
             GenerateFlameBall();
