@@ -8,10 +8,13 @@ public class GameManager : MonoBehaviour
 {
     public GameObject gameOverUI;
     public GameObject gameWinUI;
+    public GameObject pauseUI;
 
     [Header("UI Buttons")]
     [SerializeField] Button pauseButton;
     [SerializeField] Button retryButton;
+    [SerializeField] Button resumeButton;
+    [SerializeField] Button closePauseUIButton;
 
     bool isGameOver, isGameWin, isPause, isStartGame;
 
@@ -26,6 +29,8 @@ public class GameManager : MonoBehaviour
 
         pauseButton.onClick.AddListener(Pause);
         retryButton.onClick.AddListener(Retry);
+        resumeButton.onClick.AddListener(Retry);
+        closePauseUIButton.onClick.AddListener(Pause);
 
         StartCoroutine(GameOver());
     }
@@ -33,6 +38,7 @@ public class GameManager : MonoBehaviour
     {
         gameOverUI.SetActive(isGameOver);
         gameWinUI.SetActive(isGameWin);
+        pauseUI.SetActive(isPause && !isGameOver && !isGameWin);
     }
     public void StartGame()
     {

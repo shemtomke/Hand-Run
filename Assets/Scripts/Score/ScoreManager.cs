@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour
 
         // Load the high score from PlayerPrefs
         highScore = PlayerPrefs.GetInt("HighScore", 0);
-        highScoreText.text = "" + highScore;
+        highScoreText.text = "HighScore\n" + highScore;
 
         // Initialize score and timer
         score = 0;
@@ -48,7 +48,7 @@ public class ScoreManager : MonoBehaviour
             if (score > highScore)
             {
                 highScore = score;
-                highScoreText.text = "" + highScore;
+                highScoreText.text = "HighScore\n" + highScore;
 
                 // Save the new high score
                 PlayerPrefs.SetInt("HighScore", highScore);

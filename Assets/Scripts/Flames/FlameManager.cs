@@ -18,11 +18,11 @@ public class FlameManager : MonoBehaviour
     int passedFlames = 0;
 
     GameManager gameManager;
-    TextManager textManager;
+    MessageManager messageManager;
     private void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        textManager = FindObjectOfType<TextManager>();
+        messageManager = FindObjectOfType<MessageManager>();
 
         currentSpawnDelay = initialSpawnDelay;
         ResetPassedFlames();
@@ -35,12 +35,12 @@ public class FlameManager : MonoBehaviour
         passedFlames++;
         if (passedFlames % 50 == 0)
         {
-            textManager.NextMessage();
-            textManager.ShowText();
+            messageManager.NextMessage();
+            messageManager.ShowText();
         }
         else
         {
-            textManager.EmptyText();
+            messageManager.EmptyText();
         }
     }
     public void GenerateFlameBalls()
