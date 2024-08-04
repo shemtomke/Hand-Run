@@ -19,9 +19,16 @@ public class Flame : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        // Check if the collider is disabled && 
     }
     void Move()
     {
         transform.Translate(Vector3.left * speed * Time.deltaTime);
+    }
+    // flame goes from the arms to the character,if character misses the flame it goes to pick-up
+    public void DisableCollider()
+    {
+        this.GetComponent<CapsuleCollider2D>().enabled = false;
     }
 }

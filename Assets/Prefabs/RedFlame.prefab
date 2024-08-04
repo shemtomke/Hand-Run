@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26326e57b99f0b47a1590e1731fce13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 8
   startPos: {x: -15, y: -3, z: 0}
 --- !u!70 &2785724220088883351
 CapsuleCollider2D:
