@@ -33,7 +33,7 @@ public class FlameManager : MonoBehaviour
     public void PassedFlames()
     { 
         passedFlames++;
-        if (passedFlames % 50 == 0)
+        if (passedFlames % 25 == 0)
         {
             messageManager.NextMessage();
             messageManager.ShowText();

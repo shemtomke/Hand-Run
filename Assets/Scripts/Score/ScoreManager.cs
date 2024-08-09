@@ -22,9 +22,6 @@ public class ScoreManager : MonoBehaviour
         highScore = PlayerPrefs.GetInt("HighScore", 0);
         highScoreText.text = "HighScore\n" + highScore;
 
-        // Initialize score and timer
-        score = 0;
-        scoreTimer = 0f;
         UpdateScoreText();
     }
     private void Update()
@@ -55,10 +52,36 @@ public class ScoreManager : MonoBehaviour
             }
         }
     }
+    // remember the two characters(female and mosquito) have a long but not too long head start(start with a higher points),
+    // the mosquito has the longest.
+    public void SetStartScore(CharacterType characterType)
+    {
+        switch (characterType)
+        {
+            case CharacterType.Boy:
+                score = 50;
+                scoreTimer = score;
+                break;
+            case CharacterType.Girl:
+                score = 100;
+                scoreTimer = score;
+                break;
+            case CharacterType.Mosquito:
+                score = 200;
+                scoreTimer = score;
+                break;
+            default:
+                break;
+        }
+    }
     private void UpdateScoreText()
     {
-        // Update the score text to show the score
-        scoreText.text = "" + score;
+        // Check if the score is divisible by 50
+        if (score % 50 == 0)
+        {
+            // Update the score text to show the score
+            scoreText.text = "" + score;
+        }
     }
     public void ResetScore()
     {

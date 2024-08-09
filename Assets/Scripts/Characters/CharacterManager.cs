@@ -8,14 +8,28 @@ public class CharacterManager : MonoBehaviour
     [NonReorderable]
     public List<Character> characterList;
     Character selectedCharacter;
-    [SerializeField] Button nextButton, prevButton;
+    int selectedCharacterIndex;
+
+    [Header("Character Selection UI")]
+    [SerializeField] Button nextButton;
+    [SerializeField] Button prevButton;
     [SerializeField] Button selectCharacterButton;
+    [SerializeField] Button purchaseCharacterButton;
     [SerializeField] Text characterNameText;
     [SerializeField] Image characterImage;
+    [SerializeField] List<GameObject> charactersListRenderer;
 
     private int currentIndex;
+
+    DistanceManager distanceManager;
+    ScoreManager scoreManager;
+    CharacterManager characterManager;
     private void Start()
     {
+        scoreManager = FindObjectOfType<ScoreManager>();
+        characterManager = FindObjectOfType<CharacterManager>();
+        distanceManager = FindObjectOfType<DistanceManager>();
+
         nextButton.onClick.AddListener(NextCharacter);
         prevButton.onClick.AddListener(PreviousCharacter);
         selectCharacterButton.onClick.AddListener(SelectCharacter);
@@ -25,7 +39,14 @@ public class CharacterManager : MonoBehaviour
     }
     private void Update()
     {
-        
+        SetActiveRenderedCharacter(charactersListRenderer, currentIndex);
+    }
+    public void SetActiveRenderedCharacter(List<GameObject> charactersListRenderer, int currentIndex)
+    {
+        for (int i = 0; i < charactersListRenderer.Count; i++)
+        {
+            charactersListRenderer[i].SetActive(i == currentIndex);
+        }
     }
     public Character GetSelectedCharacter() {  return selectedCharacter; }
     void NextCharacter()
@@ -47,12 +68,22 @@ public class CharacterManager : MonoBehaviour
     void SelectCharacter()
     {
         selectedCharacter = characterList[currentIndex];
+        selectedCharacterIndex = currentIndex;
+        GameObject player = Instantiate(selectedCharacter.characterPrefab);
+        distanceManager.SetPlayerPosition(player.transform);
+
+        // Initialize score and timer
+        scoreManager.SetStartScore(GetSelectedCharacter().CharacterType);
     }
     private void UpdateUI()
     {
         characterNameText.text = characterList[currentIndex].characterName;
         prevButton.interactable = currentIndex > 0;
         nextButton.interactable = currentIndex < characterList.Count - 1;
+
+        selectCharacterButton.interactable = selectedCharacter != characterList[selectedCharacterIndex];
+        selectCharacterButton.gameObject.SetActive(!characterList[currentIndex].isLocked);
+        purchaseCharacterButton.gameObject.SetActive(characterList[currentIndex].isLocked);
     }
     // there is in-app purchase-purchase the female and mosquito character
 
@@ -68,6 +99,4 @@ public class CharacterManager : MonoBehaviour
     // mosquito-AREA 51 MOSQUITO
 
     // to buy female character with diamonds it costs 1000 diamonds and mosquito it's 1500 diamonds
-
-
 }

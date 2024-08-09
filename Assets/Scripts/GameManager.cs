@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
         pauseButton.onClick.AddListener(Pause);
         retryButton.onClick.AddListener(Retry);
-        resumeButton.onClick.AddListener(Retry);
+        resumeButton.onClick.AddListener(Pause);
         closePauseUIButton.onClick.AddListener(Pause);
 
         StartCoroutine(GameOver());
