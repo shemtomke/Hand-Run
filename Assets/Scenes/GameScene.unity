@@ -1175,6 +1175,7 @@ Transform:
   - {fileID: 1544310022}
   - {fileID: 1458945761}
   - {fileID: 888182881}
+  - {fileID: 1225795729}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &298479779
@@ -3203,7 +3204,7 @@ GameObject:
   - component: {fileID: 775612773}
   - component: {fileID: 775612772}
   m_Layer: 5
-  m_Name: High Score
+  m_Name: Main Menu High Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3726,6 +3727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 259084437}
   highScoreText: {fileID: 495401176}
+  mainMenuHighScoreText: {fileID: 775612772}
 --- !u!1 &904555910
 GameObject:
   m_ObjectHideFlags: 0
@@ -5133,6 +5135,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111579149}
   m_CullTransparentMesh: 1
+--- !u!1 &1225795728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225795729}
+  - component: {fileID: 1225795730}
+  m_Layer: 0
+  m_Name: Share
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1225795729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225795728}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 280479885}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1225795730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225795728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 442636c541a96d542a6b15502e49cfb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shareButton: {fileID: 1111579151}
 --- !u!1 &1260900152
 GameObject:
   m_ObjectHideFlags: 0
@@ -6914,6 +6961,7 @@ GameObject:
   - component: {fileID: 1568589037}
   - component: {fileID: 1568589036}
   - component: {fileID: 1568589035}
+  - component: {fileID: 1568589038}
   m_Layer: 5
   m_Name: Purchase Character Button
   m_TagString: Untagged
@@ -7023,6 +7071,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568589033}
   m_CullTransparentMesh: 1
+--- !u!114 &1568589038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568589033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b79b5624d944058bd39aad2b90fb275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productId: 
+  buttonType: 0
+  consumePurchase: 0
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  onProductFetched:
+    m_PersistentCalls:
+      m_Calls: []
+  button: {fileID: 1568589035}
 --- !u!1 &1614261102
 GameObject:
   m_ObjectHideFlags: 0

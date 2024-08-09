@@ -33,6 +33,7 @@ public class CharacterManager : MonoBehaviour
         nextButton.onClick.AddListener(NextCharacter);
         prevButton.onClick.AddListener(PreviousCharacter);
         selectCharacterButton.onClick.AddListener(SelectCharacter);
+        purchaseCharacterButton.onClick.AddListener(PurchaseCharacter);
 
         currentIndex = 0;
         UpdateUI();
@@ -74,6 +75,11 @@ public class CharacterManager : MonoBehaviour
 
         // Initialize score and timer
         scoreManager.SetStartScore(GetSelectedCharacter().CharacterType);
+    }
+    void PurchaseCharacter()
+    {
+        // Current Index of the Character
+
     }
     private void UpdateUI()
     {

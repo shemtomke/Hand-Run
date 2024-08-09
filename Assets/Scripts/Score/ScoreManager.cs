@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public Text scoreText;        // UI Text element for displaying the score
-    public Text highScoreText;    // UI Text element for displaying the high score
+    public Text highScoreText, mainMenuHighScoreText;    // UI Text element for displaying the high score
 
     private int score;            // Current score
     private int highScore;        // High score
@@ -21,6 +21,7 @@ public class ScoreManager : MonoBehaviour
         // Load the high score from PlayerPrefs
         highScore = PlayerPrefs.GetInt("HighScore", 0);
         highScoreText.text = "HighScore\n" + highScore;
+        mainMenuHighScoreText.text = "HighScore\n" + highScore;
 
         UpdateScoreText();
     }
