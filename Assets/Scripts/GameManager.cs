@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Button closePauseUIButton;
 
     bool isGameOver, isGameWin, isPause, isStartGame;
+    UnityEvent OnGameOver;
 
     SoundManager soundManager;
     private void Awake()
@@ -32,7 +34,7 @@ public class GameManager : MonoBehaviour
         resumeButton.onClick.AddListener(Pause);
         closePauseUIButton.onClick.AddListener(Pause);
 
-        StartCoroutine(GameOver());
+        GameOver();
     }
     private void Update()
     {
@@ -49,30 +51,45 @@ public class GameManager : MonoBehaviour
         if (isPause)
         {
             isPause = false;
+            AudioListener.pause = false;
             Time.timeScale = 1f;
         }
         else
         {
             isPause = true;
+            AudioListener.pause = true;
             Time.timeScale = 0f;
         }
     }
-    IEnumerator GameOver()
+    void GameOver()
     {
-        while (isGameOver)
-        {
-            Debug.Log("Game Over!!");
-
-            var doorShutSound = soundManager.doorShutSound;
-            var deepSignSound = soundManager.deepSighSound;
-
-            soundManager.PlaySound(doorShutSound);
-
-            yield return new WaitForSeconds(doorShutSound.clip.length);
-
-            soundManager.PlaySound(deepSignSound);
-        }
+        StartCoroutine(ShowGameOver());
     }
+    IEnumerator ShowGameOver()
+    {
+        // Wait until isGameOver becomes true
+        while (!isGameOver)
+        {
+            yield return null; // Wait for the next frame
+        }
+
+        soundManager.PauseSound(soundManager.runningSound, true);
+        soundManager.PauseSound(soundManager.runningSound2, true);
+        soundManager.PauseSound(soundManager.closeToLeftArmsSound, true);
+
+        // Once isGameOver is true, perform the game over actions
+        Debug.Log("Game Over!!");
+
+        var doorShutSound = soundManager.doorShutSound;
+        var deepSignSound = soundManager.deepSighSound;
+
+        soundManager.PlaySound(doorShutSound);
+
+        yield return new WaitForSeconds(doorShutSound.clip.length + 1f);
+
+        soundManager.PlaySound(deepSignSound);
+    }
+    public UnityEvent OnGameOverEvent() {  return OnGameOver; }
     public bool IsGameOver() {  return isGameOver; }
     public bool IsStartGame() {  return isStartGame; }
     public bool IsGameWin() { return isGameWin; }

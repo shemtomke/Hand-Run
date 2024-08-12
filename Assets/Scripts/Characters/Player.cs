@@ -57,8 +57,8 @@ public class Player : MonoBehaviour
             animator.SetBool("IsJumping", true);
 
             soundManager.PlaySound(soundManager.jumpingSound, jumpSound);
-            soundManager.MuteSound(soundManager.runningSound, false);
-            soundManager.MuteSound(soundManager.runningSound2, false);
+            soundManager.PauseSound(soundManager.runningSound, true);
+            soundManager.PauseSound(soundManager.runningSound2, true);
         }  
     }
     private bool IsTouchInputDetected()
@@ -87,6 +87,9 @@ public class Player : MonoBehaviour
         {
             isGrounded = true;
             animator.SetBool("IsJumping", false);
+
+            soundManager.PauseSound(soundManager.runningSound, false);
+            soundManager.PauseSound(soundManager.runningSound2, false);
         }
 
         if(collision.gameObject.CompareTag("Flame"))
@@ -105,8 +108,8 @@ public class Player : MonoBehaviour
         {
             isDead = true;
 
-            soundManager.MuteSound(soundManager.runningSound, true);
-            soundManager.MuteSound(soundManager.runningSound2, true);
+            soundManager.PauseSound(soundManager.runningSound, true);
+            soundManager.PauseSound(soundManager.runningSound2, true);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

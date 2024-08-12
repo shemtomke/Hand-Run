@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: c6c58b6f973c32941ab70b991d9e14d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c983f93292d6b244ac397e04410076d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 11
+  sounds: []
   jumpSound: {fileID: 8300000, guid: 8bc57eb64a317ba4880c1202fab6914f, type: 3}
   runSound: {fileID: 8300000, guid: 51e336cac24e06141a17fb3e63156ced, type: 3}
   runSound2: {fileID: 0}
