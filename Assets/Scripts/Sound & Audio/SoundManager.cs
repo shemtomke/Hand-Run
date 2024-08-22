@@ -23,7 +23,7 @@ public class SoundManager : MonoBehaviour
 
     private IEnumerator PlayDoorCreakAtIntervals()
     {
-        while (!gameManager.IsGameOver() || !gameManager.IsPause() || !gameManager.IsGameWin() || gameManager.IsStartGame()) // Loop indefinitely
+        while (gameManager.IsStartGame() && !(gameManager.IsGameOver() || gameManager.IsGameWin() || gameManager.IsPause())) // Loop indefinitely
         {
             // Randomly select an interval time (30, 45, or 60 seconds)
             float interval = UnityEngine.Random.Range(0, 3);
@@ -36,7 +36,7 @@ public class SoundManager : MonoBehaviour
             else
                 waitTime = 60f;
 
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(waitTime);
 
             // Play the door creaking sound
             if (doorCreakSound != null)

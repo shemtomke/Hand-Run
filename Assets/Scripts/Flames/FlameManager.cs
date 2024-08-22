@@ -46,12 +46,8 @@ public class FlameManager : MonoBehaviour
     void ResetPassedFlames() { passedFlames = -1; }
     IEnumerator StartGeneratingFlameBalls()
     {
-        Debug.Log("About to Start Flame! -> " + gameManager.IsStartGame());
-
         while (gameManager.IsStartGame() && !(gameManager.IsGameOver() || gameManager.IsGameWin() || gameManager.IsPause()))
         {
-            Debug.Log("Starting Flame.... -> " + gameManager.IsStartGame());
-
             // Generate a flame ball
             GenerateFlameBall();
 
