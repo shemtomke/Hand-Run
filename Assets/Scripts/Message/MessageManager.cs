@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MessageManager : MonoBehaviour
 {
+    [Header("Mesages")]
     public List<string> messages;
     public Text wordText;
     int currentMessage = -1;
@@ -29,6 +30,8 @@ public class MessageManager : MonoBehaviour
     public void ShowText()
     {
         wordText.text = messages[currentMessage];
+        Debug.Log(currentMessage);
+        Debug.Log(messages[currentMessage]);
     }
     public void EmptyText()
     {

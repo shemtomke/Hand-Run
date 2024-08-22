@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Runaway
+  companyName: Pepea
+  productName: WHY ME?
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.14901961, g: 0.14901961, b: 0.14901961, a: 1}
@@ -161,7 +161,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.HandRun
+    Android: com.Pepea.WHYME
     Standalone: com.DefaultCompany.2DProject
   buildNumber:
     Standalone: 0
@@ -287,7 +287,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: c6c58b6f973c32941ab70b991d9e14d8, type: 3}
+      m_Icon: {fileID: 2800000, guid: f3b7cd417c0adf14b8a1c74c73309862, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

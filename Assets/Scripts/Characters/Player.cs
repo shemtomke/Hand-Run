@@ -56,9 +56,9 @@ public class Player : MonoBehaviour
             // Change animation state to jump
             animator.SetBool("IsJumping", true);
 
-            soundManager.PlaySound(soundManager.jumpingSound, jumpSound);
-            soundManager.PauseSound(soundManager.runningSound, true);
-            soundManager.PauseSound(soundManager.runningSound2, true);
+            if (!distanceManager.IsCloseToDoor()) { soundManager.PlaySound(soundManager.jumpingSound, jumpSound); }
+            soundManager.PauseSound(soundManager.runningSound, false);
+            soundManager.PauseSound(soundManager.runningSound2, false);
         }  
     }
     private bool IsTouchInputDetected()
@@ -88,8 +88,16 @@ public class Player : MonoBehaviour
             isGrounded = true;
             animator.SetBool("IsJumping", false);
 
-            soundManager.PauseSound(soundManager.runningSound, false);
-            soundManager.PauseSound(soundManager.runningSound2, false);
+            if (distanceManager.IsCloseToDoor())
+            {
+                Debug.Log("Pausing sound: " + soundManager.runningSound.isPlaying);
+                soundManager.PauseSound(soundManager.runningSound, true);
+                soundManager.PauseSound(soundManager.runningSound2, true);
+            }
+            else
+            {
+                Debug.Log("Not close to door.");
+            }
         }
 
         if(collision.gameObject.CompareTag("Flame"))

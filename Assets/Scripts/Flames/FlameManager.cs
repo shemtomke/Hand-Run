@@ -15,7 +15,7 @@ public class FlameManager : MonoBehaviour
     public float speedIncrement = 0.1f;
 
     private float currentSpawnDelay;
-    int passedFlames = 0;
+    int passedFlames = -1;
 
     GameManager gameManager;
     MessageManager messageManager;
@@ -38,16 +38,12 @@ public class FlameManager : MonoBehaviour
             messageManager.NextMessage();
             messageManager.ShowText();
         }
-        else
-        {
-            messageManager.EmptyText();
-        }
     }
     public void GenerateFlameBalls()
     {
         StartCoroutine(StartGeneratingFlameBalls());
     }
-    void ResetPassedFlames() { passedFlames = 0; }
+    void ResetPassedFlames() { passedFlames = -1; }
     IEnumerator StartGeneratingFlameBalls()
     {
         Debug.Log("About to Start Flame! -> " + gameManager.IsStartGame());

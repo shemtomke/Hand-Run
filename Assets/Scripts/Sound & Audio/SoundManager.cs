@@ -10,10 +10,41 @@ public class SoundManager : MonoBehaviour
     public AudioSource runningSound2;
     public AudioSource landingSound;
     public AudioSource closeToLeftArmsSound;
+    public AudioSource doorCreakSound;
     public AudioSource doorShutSound;
     public AudioSource onAirSound;
     public AudioSource deepSighSound;
 
+    [SerializeField] GameManager gameManager;
+    void Start()
+    {
+        StartCoroutine(PlayDoorCreakAtIntervals());
+    }
+
+    private IEnumerator PlayDoorCreakAtIntervals()
+    {
+        while (!gameManager.IsGameOver() || !gameManager.IsPause() || !gameManager.IsGameWin() || gameManager.IsStartGame()) // Loop indefinitely
+        {
+            // Randomly select an interval time (30, 45, or 60 seconds)
+            float interval = UnityEngine.Random.Range(0, 3);
+            float waitTime;
+
+            if (interval == 0)
+                waitTime = 30f;
+            else if (interval == 1)
+                waitTime = 45f;
+            else
+                waitTime = 60f;
+
+            yield return new WaitForSeconds(4f);
+
+            // Play the door creaking sound
+            if (doorCreakSound != null)
+            {
+                doorCreakSound.Play();
+            }
+        }
+    }
     public void PlaySound(AudioSource audioSource)
     {
         if (audioSource.isPlaying) return;
