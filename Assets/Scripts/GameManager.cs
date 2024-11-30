@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Button resumeButton;
     [SerializeField] Button closePauseUIButton;
 
-    bool isGameOver, isGameWin, isPause, isStartGame;
+    [SerializeField] bool isGameOver, isGameWin, isPause, isStartGame;
     UnityEvent OnGameOver;
 
     SoundManager soundManager;
@@ -29,10 +29,12 @@ public class GameManager : MonoBehaviour
     {
         soundManager = FindObjectOfType<SoundManager>();
 
+        Resume();
+
         pauseButton.onClick.AddListener(Pause);
         retryButton.onClick.AddListener(Retry);
-        resumeButton.onClick.AddListener(Pause);
-        closePauseUIButton.onClick.AddListener(Pause);
+        resumeButton.onClick.AddListener(Resume);
+        closePauseUIButton.onClick.AddListener(Resume);
 
         GameOver();
     }
@@ -48,18 +50,28 @@ public class GameManager : MonoBehaviour
     }
     void Pause()
     {
-        if (isPause)
-        {
-            isPause = false;
-            AudioListener.pause = false;
-            Time.timeScale = 1f;
-        }
-        else
-        {
-            isPause = true;
-            AudioListener.pause = true;
-            Time.timeScale = 0f;
-        }
+        isPause = true;
+        AudioListener.pause = true;
+        Time.timeScale = 0f;
+
+        //if (isPause)
+        //{
+        //    isPause = false;
+        //    AudioListener.pause = false;
+        //    Time.timeScale = 1f;
+        //}
+        //else
+        //{
+        //    isPause = true;
+        //    AudioListener.pause = true;
+        //    Time.timeScale = 0f;
+        //}
+    }
+    void Resume()
+    {
+        isPause = false;
+        AudioListener.pause = false;
+        Time.timeScale = 1f;
     }
     void GameOver()
     {

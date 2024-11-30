@@ -1,9 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 public class FlameManager : MonoBehaviour
 {
@@ -15,23 +13,28 @@ public class FlameManager : MonoBehaviour
     public float speedIncrement = 0.1f;
 
     private float currentSpawnDelay;
+    private float currentSpeed;  // Track the speed globally
+
     int passedFlames = -1;
 
     GameManager gameManager;
     MessageManager messageManager;
+
     private void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
         messageManager = FindObjectOfType<MessageManager>();
 
         currentSpawnDelay = initialSpawnDelay;
+        currentSpeed = 15f;  // Initialize global speed
         ResetPassedFlames();
     }
+
     // if character misses 15 flames distance is reduced and increased by 1.
     public void SetPassedFlames(int numberOfPassedFlames) { passedFlames = numberOfPassedFlames; }
-    public int GetPassedFlames() {  return passedFlames; }
+    public int GetPassedFlames() { return passedFlames; }
     public void PassedFlames()
-    { 
+    {
         passedFlames++;
         if (passedFlames % 25 == 0)
         {
@@ -39,11 +42,14 @@ public class FlameManager : MonoBehaviour
             messageManager.ShowText();
         }
     }
+
     public void GenerateFlameBalls()
     {
         StartCoroutine(StartGeneratingFlameBalls());
     }
+
     void ResetPassedFlames() { passedFlames = -1; }
+
     IEnumerator StartGeneratingFlameBalls()
     {
         while (gameManager.IsStartGame() && !(gameManager.IsGameOver() || gameManager.IsGameWin() || gameManager.IsPause()))
@@ -58,16 +64,22 @@ public class FlameManager : MonoBehaviour
             currentSpawnDelay = Mathf.Max(minimumSpawnDelay, currentSpawnDelay - spawnAcceleration);
         }
     }
+
     void GenerateFlameBall()
     {
         // Choose a random flame ball prefab
-        GameObject flameBallPrefab = flameBalls[Random.Range(0, flameBalls.Length)];
+        GameObject flameBallPrefab = flameBalls[UnityEngine.Random.Range(0, flameBalls.Length)];
 
         // Instantiate the flame ball at the random position
         GameObject flameBall = Instantiate(flameBallPrefab);
 
         Flame flameScript = flameBall.GetComponent<Flame>();
-        flameScript.speed = Mathf.Min(flameScript.speed + speedIncrement, maxSpeed);
+
+        // Increase the global speed, ensuring it doesn't exceed maxSpeed
+        currentSpeed = Mathf.Min(currentSpeed + speedIncrement, maxSpeed);
+
+        // Set the flame's speed to the current global speed
+        flameScript.speed = currentSpeed;
 
         PassedFlames();
     }

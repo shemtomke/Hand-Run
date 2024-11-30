@@ -18,9 +18,11 @@ public class UIManager : MonoBehaviour
 
     GameManager gameManager;
     FlameManager flameManager;
+    SoundManager soundManager;
     private void Start()
     {
         flameManager = FindObjectOfType<FlameManager>();
+        soundManager = FindObjectOfType<SoundManager>();
         gameManager = FindObjectOfType<GameManager>();
 
         startButton.onClick.AddListener(() =>
@@ -34,6 +36,9 @@ public class UIManager : MonoBehaviour
             gameUI.SetActive(true);
             gameManager.SetStartGame(true);
             flameManager.GenerateFlameBalls();
+
+            // Start Door Creak
+            soundManager.StartPlayingDoorCreak();
         });
     }
 }

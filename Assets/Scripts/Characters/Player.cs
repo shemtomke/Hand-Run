@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public CharacterType characterType;
     public float jumpForce = 5f;
-    private bool isGrounded;
-    bool isDead = false;
-    bool isHit = false;
+    [SerializeField] private bool isGrounded;
+    [SerializeField] private bool isJumping = false;
+    [SerializeField] bool isDead = false;
+    [SerializeField] bool isHit = false;
+    public float groundCheckDistance = 0.1f; // Distance for ground check
+    public LayerMask groundLayer;            // Layer that represents the ground
 
     [Header("Sounds")]
     [NonReorderable]
@@ -39,11 +43,24 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        GroundCheck();
         Jump();
     }
     private void Update()
     {
+        HandleRunningState();
         Death();
+    }
+    void GroundCheck()
+    {
+        // Cast a ray downwards from the character's position
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
+
+        // Draw the ray in the Scene view for debugging
+        Debug.DrawRay(transform.position, Vector2.down * groundCheckDistance, Color.red);
+
+        // Check if the raycast hit something in the ground layer
+        isGrounded = hit.collider != null;
     }
     void Jump()
     {
@@ -53,12 +70,48 @@ public class Player : MonoBehaviour
             // Apply the jump force
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
-            // Change animation state to jump
-            animator.SetBool("IsJumping", true);
+            isJumping = true;
 
-            if (!distanceManager.IsCloseToDoor()) { soundManager.PlaySound(soundManager.jumpingSound, jumpSound); }
-            soundManager.PauseSound(soundManager.runningSound, true);
-            soundManager.PauseSound(soundManager.runningSound2, true);
+            // Change animation state to jump
+            animator.SetBool("IsJumping", isJumping);
+
+            //if (!distanceManager.IsCloseToDoor()) { soundManager.PlaySound(soundManager.jumpingSound, jumpSound); }
+
+            // Play Jump Sound
+            soundManager.PlaySound(soundManager.jumpingSound, jumpSound);
+
+            // Stop Playing some run sounds
+            // Mosquito
+            if (characterType == CharacterType.Mosquito)
+            {
+                soundManager.PauseSound(soundManager.runningSound2, true);
+            }
+            // Boy
+            else if (characterType == CharacterType.Boy)
+            {
+                soundManager.PauseSound(soundManager.runningSound, true);
+                soundManager.PauseSound(soundManager.runningSound2, true);
+            }
+        }
+    }
+    void HandleRunningState()
+    {
+        if(isGrounded)
+        {
+            if (!isJumping && !isDead && !isHit)
+            {
+                animator.SetBool("IsJumping", isJumping);
+
+                // Play The Sounds for running
+                soundManager.PauseSound(soundManager.runningSound, false);
+                soundManager.PauseSound(soundManager.runningSound2, false);
+
+                //    //if (!distanceManager.IsCloseToDoor())
+                //    //{
+                //    //    soundManager.PauseSound(soundManager.runningSound, false);
+                //    //    soundManager.PauseSound(soundManager.runningSound2, false);
+                //    //}
+            }
         }
     }
     private bool IsTouchInputDetected()
@@ -83,15 +136,24 @@ public class Player : MonoBehaviour
     // This method checks if the player is grounded
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") && !isHit && !isDead)
-        {
-            isGrounded = true;
-            animator.SetBool("IsJumping", false);
+        //if (collision.gameObject.CompareTag("Ground") && !isHit && !isDead)
+        //{
+        //    isJumping = false;
 
-            if (!distanceManager.IsCloseToDoor())
+        //    // Pause Sounds when close to the door
+        //    //if (!distanceManager.IsCloseToDoor())
+        //    //{
+        //    //    soundManager.PauseSound(soundManager.runningSound, false);
+        //    //    soundManager.PauseSound(soundManager.runningSound2, false);
+        //    //}
+        //}
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            isJumping = false;
+
+            if (characterType == CharacterType.Girl)
             {
-                soundManager.PauseSound(soundManager.runningSound, false);
-                soundManager.PauseSound(soundManager.runningSound2, false);
+                soundManager.PlaySound(soundManager.landingSound, landSound);
             }
         }
 
@@ -113,13 +175,6 @@ public class Player : MonoBehaviour
 
             soundManager.PauseSound(soundManager.runningSound, true);
             soundManager.PauseSound(soundManager.runningSound2, true);
-        }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
         }
     }
     // if the flame touches the character distance from pick-up to character increases and distance from arms to pick-up reduces.

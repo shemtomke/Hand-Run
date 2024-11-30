@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2876430134689070822}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -2.4, z: 0}
+  m_LocalPosition: {x: 1, y: -3, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -148,10 +148,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a5a52c6eea3b047b893e671cfdc3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterType: 2
   jumpForce: 11
+  isGrounded: 0
+  isJumping: 0
+  isDead: 0
+  isHit: 0
+  groundCheckDistance: 2.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
   sounds: []
-  jumpSound: {fileID: 8300000, guid: 290400e886c608a49a9af176cb41b8de, type: 3}
-  runSound: {fileID: 8300000, guid: 0f161a36c47a4b044a60e6f88d5f5921, type: 3}
+  jumpSound: {fileID: 8300000, guid: f32dbf65ae8e64047b455b0e79fc9325, type: 3}
+  runSound: {fileID: 8300000, guid: 190a1ed804b522848b05c340219d7dc3, type: 3}
   runSound2: {fileID: 8300000, guid: 290400e886c608a49a9af176cb41b8de, type: 3}
   onAirSound: {fileID: 8300000, guid: 0f161a36c47a4b044a60e6f88d5f5921, type: 3}
   landSound: {fileID: 0}
@@ -188,5 +197,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.026277304, y: -0.45297682}
-  m_Size: {x: 6.498618, y: 9.081566}
+  m_Size: {x: 6.498618, y: 10}
   m_Direction: 0

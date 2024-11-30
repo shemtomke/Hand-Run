@@ -16,14 +16,15 @@ public class SoundManager : MonoBehaviour
     public AudioSource deepSighSound;
 
     [SerializeField] GameManager gameManager;
-    void Start()
+    public void StartPlayingDoorCreak()
     {
         StartCoroutine(PlayDoorCreakAtIntervals());
     }
-
     private IEnumerator PlayDoorCreakAtIntervals()
     {
-        while (gameManager.IsStartGame() && !(gameManager.IsGameOver() || gameManager.IsGameWin() || gameManager.IsPause())) // Loop indefinitely
+        Debug.Log($"IsStartGame: {gameManager.IsStartGame()}, IsGameOver: {gameManager.IsGameOver()}, IsGameWin: {gameManager.IsGameWin()}, IsPause: {gameManager.IsPause()}");
+
+        while (gameManager.IsStartGame() && !(gameManager.IsGameOver() || gameManager.IsGameWin() || gameManager.IsPause()))
         {
             // Randomly select an interval time (30, 45, or 60 seconds)
             float interval = UnityEngine.Random.Range(0, 3);
@@ -36,14 +37,21 @@ public class SoundManager : MonoBehaviour
             else
                 waitTime = 60f;
 
+            Debug.Log("Wait Time : " + waitTime);
+
             yield return new WaitForSeconds(waitTime);
+
+            Debug.Log("Playing door creak sound after wait time.");
 
             // Play the door creaking sound
             if (doorCreakSound != null)
             {
+                Debug.Log("Play Creak Sound!");
                 doorCreakSound.Play();
             }
         }
+
+        Debug.Log("Exiting coroutine.");
     }
     public void PlaySound(AudioSource audioSource)
     {

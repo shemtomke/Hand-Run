@@ -60,11 +60,11 @@ public class ScoreManager : MonoBehaviour
         switch (characterType)
         {
             case CharacterType.Boy:
-                score = 50;
+                score = 0;
                 scoreTimer = score;
                 break;
             case CharacterType.Girl:
-                score = 100;
+                score = 300;
                 scoreTimer = score;
                 break;
             case CharacterType.Mosquito:

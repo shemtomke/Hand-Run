@@ -149,6 +149,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 11
+  isGrounded: 0
+  isJumping: 0
+  isDead: 0
+  isHit: 0
+  groundCheckDistance: 2.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
   sounds: []
   jumpSound: {fileID: 8300000, guid: c6e5a6ee94a8932438944458e0cdf0dd, type: 3}
   runSound: {fileID: 8300000, guid: 86c24fc6772c4834489c829b3e4a567f, type: 3}

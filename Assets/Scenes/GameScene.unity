@@ -194,29 +194,29 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "TERMS OF USE\r\n\r\nLast updated July 19, 2024\r\n\r\n\r\n\r\nAGREEMENT
-    TO OUR LEGAL TERMS\r\n\r\nWe are Pepea (\"Company,\" \"we,\" \"us,\" \"our\"),
-    a company registered in Kenya at Nairobi, Nairobi.\r\n\r\nWe operate the mobile
-    application Why me? (the \"App\"), as well as any other related products and
-    services that refer or link to these legal terms (the \"Legal Terms\") (collectively,
-    the \"Services\").\r\n\r\nYou can contact us by email at Pepea@gmail.com or by
-    mail to Nairobi, Nairobi, Kenya.\r\n\r\nThese Legal Terms constitute a legally
-    binding agreement made between you, whether personally or on behalf of an entity
-    (\"you\"), and Pepea, concerning your access to and use of the Services. You
-    agree that by accessing the Services, you have read, understood, and agreed to
-    be bound by all of these Legal Terms. IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL
-    TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST
-    DISCONTINUE USE IMMEDIATELY.\r\n\r\nWe will provide you with prior notice of
-    any scheduled changes to the Services you are using. Changes to Legal Terms will
-    become effective fifteen (15) days after the notice is given, except if the changes
-    apply to new functionality, bug fixes, and a court order, in which case the changes
-    will be effective immediately. By continuing to use the Services after the effective
-    date of any changes, you agree to be bound by the modified terms. If you disagree
-    with such changes, you may terminate Services as per the section \"TERM AND TERMINATION.\"\r\n\r\nThe
-    Services are intended for users who are at least 13 years of age. All users who
-    are minors in the jurisdiction in which they reside (generally under the age
-    of 18) must have the permission of, and be directly supervised by, their parent
-    or guardian to use the Services. If you are a minor, you must have your parent
-    or guardian read and agree to these Legal Terms prior to you using the Services.\r\n\r\nWe
+    TO OUR LEGAL TERMS\r\n\r\nWe are (\"Company,\" \"we,\" \"us,\" \"our\"), a company
+    registered in Kenya at Nairobi, Nairobi.\r\n\r\nWe operate the mobile application
+    Why me? (the \"App\"), as well as any other related products and services that
+    refer or link to these legal terms (the \"Legal Terms\") (collectively, the \"Services\").\r\n\r\nYou
+    can contact us by email at CHEZARANGI@gmail.com or by mail to Nairobi, Nairobi,
+    Kenya.\r\n\r\nThese Legal Terms constitute a legally binding agreement made between
+    you, whether personally or on behalf of an entity (\"you\"), and CHEZARANGI,
+    concerning your access to and use of the Services. You agree that by accessing
+    the Services, you have read, understood, and agreed to be bound by all of these
+    Legal Terms. IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE
+    EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.\r\n\r\nWe
+    will provide you with prior notice of any scheduled changes to the Services you
+    are using. Changes to Legal Terms will become effective fifteen (15) days after
+    the notice is given, except if the changes apply to new functionality, bug fixes,
+    and a court order, in which case the changes will be effective immediately. By
+    continuing to use the Services after the effective date of any changes, you agree
+    to be bound by the modified terms. If you disagree with such changes, you may
+    terminate Services as per the section \"TERM AND TERMINATION.\"\r\n\r\nThe Services
+    are intended for users who are at least 13 years of age. All users who are minors
+    in the jurisdiction in which they reside (generally under the age of 18) must
+    have the permission of, and be directly supervised by, their parent or guardian
+    to use the Services. If you are a minor, you must have your parent or guardian
+    read and agree to these Legal Terms prior to you using the Services.\r\n\r\nWe
     recommend that you print a copy of these Legal Terms for your records.\r\n\r\n\r\nTABLE
     OF CONTENTS\r\n\r\n1. OUR SERVICES\r\n2. INTELLECTUAL PROPERTY RIGHTS\r\n3. USER
     REPRESENTATIONS\r\n\r\n4. PRODUCTS\r\n5. PURCHASES AND PAYMENT\r\n6.\u2002REFUNDS\u2002POLICY\r\n7.
@@ -260,8 +260,8 @@ MonoBehaviour:
     otherwise exploited for any commercial purpose whatsoever, without our express
     prior written permission.\r\n\r\nIf you wish to make any use of the Services,
     Content, or Marks other than as set out in this section or elsewhere in our Legal
-    Terms, please address your request to: Pepea@gmail.com. If we ever grant you
-    the permission to post, reproduce, or publicly display any part of our Services
+    Terms, please address your request to: CHEZARANGI@gmail.com. If we ever grant
+    you the permission to post, reproduce, or publicly display any part of our Services
     or Content, you must identify us as the owners or licensors of the Services,
     Content, or Marks and ensure that any copyright or proprietary notice appears
     or is visible on posting, reproducing, or displaying our Content.\r\n\r\nWe reserve
@@ -415,7 +415,7 @@ MonoBehaviour:
     unsolicited commercial email; or (9) use any proprietary information or any of
     our interfaces or our other intellectual property in the design, development,
     manufacture, licensing, or distribution of any applications, accessories, or
-    devices for use with the App.\r\n\n"
+    devices for use with the App.\r\n"
 --- !u!222 &26533768
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 27225809}
   - component: {fileID: 27225808}
   - component: {fileID: 27225810}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0025814474}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1194,7 +1194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 640, y: -77.5}
+  m_AnchoredPosition: {x: 720, y: -75}
   m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &202938548
@@ -1764,7 +1764,7 @@ MonoBehaviour:
   spawnAcceleration: 0.01
   minimumSpawnDelay: 2
   maxSpeed: 30
-  speedIncrement: 0.5
+  speedIncrement: 0.2
 --- !u!4 &312884249
 Transform:
   m_ObjectHideFlags: 0
@@ -1956,12 +1956,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -3488,98 +3488,99 @@ MonoBehaviour:
     Nothing in these Legal Terms will be construed to obligate us to maintain and
     support the Services or to supply any corrections, updates, or releases in connection
     therewith.\r\n\r\n17. GOVERNING LAW\r\n\r\nThese Legal Terms shall be governed
-    by and defined following the laws of Kenya. Pepea and yourself irrevocably consent
-    that the courts of Kenya shall have exclusive jurisdiction to resolve any dispute
-    which may arise in connection with these Legal Terms.\r\n\r\n18. DISPUTE RESOLUTION\r\n\r\nInformal
-    Negotiations\r\n\r\nTo expedite resolution and control the cost of any dispute,
-    controversy, or claim related to these Legal Terms (each a \"Dispute\" and collectively,
-    the \"Disputes\") brought by either you or us (individually, a \"Party\" and
-    collectively, the \"Parties\"), the Parties agree to first attempt to negotiate
-    any Dispute (except those Disputes expressly provided below) informally for at
-    least thirty (30) days before initiating arbitration. Such informal negotiations
-    commence upon written notice from one Party to the other Party.\r\n\r\nBinding
-    Arbitration\r\n\r\nAny dispute arising out of or in connection with these Legal
-    Terms, including any question regarding its existence, validity, or termination,
-    shall be referred to and finally resolved by the International Commercial Arbitration
-    Court under the European Arbitration Chamber (Belgium, Brussels, Avenue Louise,
-    146) according to the Rules of this ICAC, which, as a result of referring to
-    it, is considered as the part of this clause. The number of arbitrators shall
-    be three (3). The seat, or legal place, or arbitration shall be Nairobi, Kenya.
-    The language of the proceedings shall be English. The governing law of these
-    Legal Terms shall be substantive law of Kenya.\r\n\r\nRestrictions\r\n\r\nThe
-    Parties agree that any arbitration shall be limited to the Dispute between the
-    Parties individually. To the full extent permitted by law, (a) no arbitration
-    shall be joined with any other proceeding; (b) there is no right or authority
-    for any Dispute to be arbitrated on a class-action basis or to utilize class
-    action procedures; and (c) there is no right or authority for any Dispute to
-    be brought in a purported representative capacity on behalf of the general public
-    or any other persons.\r\n\r\nExceptions to Informal Negotiations and Arbitration\r\n\r\nThe
-    Parties agree that the following Disputes are not subject to the above provisions
-    concerning informal negotiations binding arbitration: (a) any Disputes seeking
-    to enforce or protect, or concerning the validity of, any of the intellectual
-    property rights of a Party; (b) any Dispute related to, or arising from, allegations
-    of theft, piracy, invasion of privacy, or unauthorized use; and (c) any claim
-    for injunctive relief. If this provision is found to be illegal or unenforceable,
-    then neither Party will elect to arbitrate any Dispute falling within that portion
-    of this provision found to be illegal or unenforceable and such Dispute shall
-    be decided by a court of competent jurisdiction within the courts listed for
-    jurisdiction above, and the Parties agree to submit to the personal jurisdiction
-    of that court.\r\n\r\n19. CORRECTIONS\r\n\r\nThere may be information on the
-    Services that contains typographical errors, inaccuracies, or omissions, including
-    descriptions, pricing, availability, and various other information. We reserve
-    the right to correct any errors, inaccuracies, or omissions and to change or
-    update the information on the Services at any time, without prior notice.\r\n\r\n20.
-    DISCLAIMER\r\n\r\nTHE SERVICES ARE PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS.
-    YOU AGREE THAT YOUR USE OF THE SERVICES WILL BE AT YOUR SOLE RISK. TO THE FULLEST
-    EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION
-    WITH THE SERVICES AND YOUR USE THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
-    WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
-    WE MAKE NO WARRANTIES OR REPRESENTATIONS ABOUT THE ACCURACY OR COMPLETENESS OF
-    THE SERVICES' CONTENT OR THE CONTENT OF ANY WEBSITES OR MOBILE APPLICATIONS LINKED
-    TO THE SERVICES AND WE WILL ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY (1)
-    ERRORS, MISTAKES, OR INACCURACIES OF CONTENT AND MATERIALS, (2) PERSONAL INJURY
-    OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND
-    USE OF THE SERVICES, (3) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS
-    AND/OR ANY AND ALL PERSONAL INFORMATION AND/OR FINANCIAL INFORMATION STORED THEREIN,
-    (4) ANY INTERRUPTION OR CESSATION OF TRANSMISSION TO OR FROM THE SERVICES, (5)
-    ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE WHICH MAY BE TRANSMITTED TO OR
-    THROUGH THE SERVICES BY ANY THIRD PARTY, AND/OR (6) ANY ERRORS OR OMISSIONS IN
-    ANY CONTENT AND MATERIALS OR FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A
-    RESULT OF THE USE OF ANY CONTENT POSTED, TRANSMITTED, OR OTHERWISE MADE AVAILABLE
-    VIA THE SERVICES. WE DO NOT WARRANT, ENDORSE, GUARANTEE, OR ASSUME RESPONSIBILITY
-    FOR ANY PRODUCT OR SERVICE ADVERTISED OR OFFERED BY A THIRD PARTY THROUGH THE
-    SERVICES, ANY HYPERLINKED WEBSITE, OR ANY WEBSITE OR MOBILE APPLICATION FEATURED
-    IN ANY BANNER OR OTHER ADVERTISING, AND WE WILL NOT BE A PARTY TO OR IN ANY WAY
-    BE RESPONSIBLE FOR MONITORING ANY TRANSACTION BETWEEN YOU AND ANY THIRD-PARTY
-    PROVIDERS OF PRODUCTS OR SERVICES. AS WITH THE PURCHASE OF A PRODUCT OR SERVICE
-    THROUGH ANY MEDIUM OR IN ANY ENVIRONMENT, YOU SHOULD USE YOUR BEST JUDGMENT AND
-    EXERCISE CAUTION WHERE APPROPRIATE.\r\n\r\n21. LIMITATIONS OF LIABILITY\r\n\r\nIN
-    NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE TO YOU OR ANY
-    THIRD PARTY FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL,
-    OR PUNITIVE DAMAGES, INCLUDING LOST PROFIT, LOST REVENUE, LOSS OF DATA, OR OTHER
-    DAMAGES ARISING FROM YOUR USE OF THE SERVICES, EVEN IF WE HAVE BEEN ADVISED OF
-    THE POSSIBILITY OF SUCH DAMAGES. NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED
-    HEREIN, OUR LIABILITY TO YOU FOR ANY CAUSE WHATSOEVER AND REGARDLESS OF THE FORM
-    OF THE ACTION, WILL AT ALL TIMES BE LIMITED TO THE AMOUNT PAID, IF ANY, BY YOU
-    TO US DURING THE SIX (6) MONTH PERIOD PRIOR TO ANY CAUSE OF ACTION ARISING. CERTAIN
-    US STATE LAWS AND INTERNATIONAL LAWS DO NOT ALLOW LIMITATIONS ON IMPLIED WARRANTIES
-    OR THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU,
-    SOME OR ALL OF THE ABOVE DISCLAIMERS OR LIMITATIONS MAY NOT APPLY TO YOU, AND
-    YOU MAY HAVE ADDITIONAL RIGHTS.\r\n\r\n22. INDEMNIFICATION\r\n\r\nYou agree to
-    defend, indemnify, and hold us harmless, including our subsidiaries, affiliates,
-    and all of our respective officers, agents, partners, and employees, from and
-    against any loss, damage, liability, claim, or demand, including reasonable attorneys\u2019
-    fees and expenses, made by any third party due to or arising out of: (1) use
-    of the Services; (2) breach of these Legal Terms; (3) any breach of your representations
-    and warranties set forth in these Legal Terms; (4) your violation of the rights
-    of a third party, including but not limited to intellectual property rights;
-    or (5) any overt harmful act toward any other user of the Services with whom
-    you connected via the Services. Notwithstanding the foregoing, we reserve the
-    right, at your expense, to assume the exclusive defense and control of any matter
-    for which you are required to indemnify us, and you agree to cooperate, at your
-    expense, with our defense of such claims. We will use reasonable efforts to notify
-    you of any such claim, action, or proceeding which is subject to this indemnification
-    upon becoming aware of it.\r\n\n"
+    by and defined following the laws of Kenya. CHEZARANGI and yourself irrevocably
+    consent that the courts of Kenya shall have exclusive jurisdiction to resolve
+    any dispute which may arise in connection with these Legal Terms.\r\n\r\n18.
+    DISPUTE RESOLUTION\r\n\r\nInformal Negotiations\r\n\r\nTo expedite resolution
+    and control the cost of any dispute, controversy, or claim related to these Legal
+    Terms (each a \"Dispute\" and collectively, the \"Disputes\") brought by either
+    you or us (individually, a \"Party\" and collectively, the \"Parties\"), the
+    Parties agree to first attempt to negotiate any Dispute (except those Disputes
+    expressly provided below) informally for at least thirty (30) days before initiating
+    arbitration. Such informal negotiations commence upon written notice from one
+    Party to the other Party.\r\n\r\nBinding Arbitration\r\n\r\nAny dispute arising
+    out of or in connection with these Legal Terms, including any question regarding
+    its existence, validity, or termination, shall be referred to and finally resolved
+    by the International Commercial Arbitration Court under the European Arbitration
+    Chamber (Belgium, Brussels, Avenue Louise, 146) according to the Rules of this
+    ICAC, which, as a result of referring to it, is considered as the part of this
+    clause. The number of arbitrators shall be three (3). The seat, or legal place,
+    or arbitration shall be Nairobi, Kenya. The language of the proceedings shall
+    be English. The governing law of these Legal Terms shall be substantive law of
+    Kenya.\r\n\r\nRestrictions\r\n\r\nThe Parties agree that any arbitration shall
+    be limited to the Dispute between the Parties individually. To the full extent
+    permitted by law, (a) no arbitration shall be joined with any other proceeding;
+    (b) there is no right or authority for any Dispute to be arbitrated on a class-action
+    basis or to utilize class action procedures; and (c) there is no right or authority
+    for any Dispute to be brought in a purported representative capacity on behalf
+    of the general public or any other persons.\r\n\r\nExceptions to Informal Negotiations
+    and Arbitration\r\n\r\nThe Parties agree that the following Disputes are not
+    subject to the above provisions concerning informal negotiations binding arbitration:
+    (a) any Disputes seeking to enforce or protect, or concerning the validity of,
+    any of the intellectual property rights of a Party; (b) any Dispute related to,
+    or arising from, allegations of theft, piracy, invasion of privacy, or unauthorized
+    use; and (c) any claim for injunctive relief. If this provision is found to be
+    illegal or unenforceable, then neither Party will elect to arbitrate any Dispute
+    falling within that portion of this provision found to be illegal or unenforceable
+    and such Dispute shall be decided by a court of competent jurisdiction within
+    the courts listed for jurisdiction above, and the Parties agree to submit to
+    the personal jurisdiction of that court.\r\n\r\n19. CORRECTIONS\r\n\r\nThere
+    may be information on the Services that contains typographical errors, inaccuracies,
+    or omissions, including descriptions, pricing, availability, and various other
+    information. We reserve the right to correct any errors, inaccuracies, or omissions
+    and to change or update the information on the Services at any time, without
+    prior notice.\r\n\r\n20. DISCLAIMER\r\n\r\nTHE SERVICES ARE PROVIDED ON AN AS-IS
+    AND AS-AVAILABLE BASIS. YOU AGREE THAT YOUR USE OF THE SERVICES WILL BE AT YOUR
+    SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES,
+    EXPRESS OR IMPLIED, IN CONNECTION WITH THE SERVICES AND YOUR USE THEREOF, INCLUDING,
+    WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+    PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE MAKE NO WARRANTIES OR REPRESENTATIONS
+    ABOUT THE ACCURACY OR COMPLETENESS OF THE SERVICES' CONTENT OR THE CONTENT OF
+    ANY WEBSITES OR MOBILE APPLICATIONS LINKED TO THE SERVICES AND WE WILL ASSUME
+    NO LIABILITY OR RESPONSIBILITY FOR ANY (1) ERRORS, MISTAKES, OR INACCURACIES
+    OF CONTENT AND MATERIALS, (2) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE
+    WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND USE OF THE SERVICES, (3) ANY UNAUTHORIZED
+    ACCESS TO OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION
+    AND/OR FINANCIAL INFORMATION STORED THEREIN, (4) ANY INTERRUPTION OR CESSATION
+    OF TRANSMISSION TO OR FROM THE SERVICES, (5) ANY BUGS, VIRUSES, TROJAN HORSES,
+    OR THE LIKE WHICH MAY BE TRANSMITTED TO OR THROUGH THE SERVICES BY ANY THIRD
+    PARTY, AND/OR (6) ANY ERRORS OR OMISSIONS IN ANY CONTENT AND MATERIALS OR FOR
+    ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF ANY CONTENT
+    POSTED, TRANSMITTED, OR OTHERWISE MADE AVAILABLE VIA THE SERVICES. WE DO NOT
+    WARRANT, ENDORSE, GUARANTEE, OR ASSUME RESPONSIBILITY FOR ANY PRODUCT OR SERVICE
+    ADVERTISED OR OFFERED BY A THIRD PARTY THROUGH THE SERVICES, ANY HYPERLINKED
+    WEBSITE, OR ANY WEBSITE OR MOBILE APPLICATION FEATURED IN ANY BANNER OR OTHER
+    ADVERTISING, AND WE WILL NOT BE A PARTY TO OR IN ANY WAY BE RESPONSIBLE FOR MONITORING
+    ANY TRANSACTION BETWEEN YOU AND ANY THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES.
+    AS WITH THE PURCHASE OF A PRODUCT OR SERVICE THROUGH ANY MEDIUM OR IN ANY ENVIRONMENT,
+    YOU SHOULD USE YOUR BEST JUDGMENT AND EXERCISE CAUTION WHERE APPROPRIATE.\r\n\r\n21.
+    LIMITATIONS OF LIABILITY\r\n\r\nIN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES,
+    OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL,
+    EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFIT, LOST
+    REVENUE, LOSS OF DATA, OR OTHER DAMAGES ARISING FROM YOUR USE OF THE SERVICES,
+    EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. NOTWITHSTANDING
+    ANYTHING TO THE CONTRARY CONTAINED HEREIN, OUR LIABILITY TO YOU FOR ANY CAUSE
+    WHATSOEVER AND REGARDLESS OF THE FORM OF THE ACTION, WILL AT ALL TIMES BE LIMITED
+    TO THE AMOUNT PAID, IF ANY, BY YOU TO US DURING THE SIX (6) MONTH PERIOD PRIOR
+    TO ANY CAUSE OF ACTION ARISING. CERTAIN US STATE LAWS AND INTERNATIONAL LAWS
+    DO NOT ALLOW LIMITATIONS ON IMPLIED WARRANTIES OR THE EXCLUSION OR LIMITATION
+    OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE DISCLAIMERS
+    OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MAY HAVE ADDITIONAL RIGHTS.\r\n\r\n22.
+    INDEMNIFICATION\r\n\r\nYou agree to defend, indemnify, and hold us harmless,
+    including our subsidiaries, affiliates, and all of our respective officers, agents,
+    partners, and employees, from and against any loss, damage, liability, claim,
+    or demand, including reasonable attorneys\u2019 fees and expenses, made by any
+    third party due to or arising out of: (1) use of the Services; (2) breach of
+    these Legal Terms; (3) any breach of your representations and warranties set
+    forth in these Legal Terms; (4) your violation of the rights of a third party,
+    including but not limited to intellectual property rights; or (5) any overt harmful
+    act toward any other user of the Services with whom you connected via the Services.
+    Notwithstanding the foregoing, we reserve the right, at your expense, to assume
+    the exclusive defense and control of any matter for which you are required to
+    indemnify us, and you agree to cooperate, at your expense, with our defense of
+    such claims. We will use reasonable efforts to notify you of any such claim,
+    action, or proceeding which is subject to this indemnification upon becoming
+    aware of it.\r\n"
 --- !u!222 &640920261
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5952,7 +5953,7 @@ MonoBehaviour:
     affect the lawfulness of the processing before its withdrawal nor, when applicable
     law allows, will it affect the processing of your personal information conducted
     in reliance on lawful processing grounds other than consent.\r\n\r\nIf you have
-    questions or comments about your privacy rights, you may email us at PepeaAfri@gmail.com.\r\n\r\n8.
+    questions or comments about your privacy rights, you may email us at CHEZARANGIAfri@gmail.com.\r\n\r\n8.
     CONTROLS FOR DO-NOT-TRACK FEATURES\r\n\r\nMost web browsers and some mobile operating
     systems and mobile applications include a Do-Not-Track (\"DNT\") feature or setting
     you can activate to signal your privacy preference not to have data about your
@@ -6040,7 +6041,7 @@ MonoBehaviour:
     the operation of a voice or facial recognition feature (as permitted by applicable
     law, including Florida\u2019s privacy law)\r\nHow to Exercise Your Rights\r\n\r\nTo
     exercise these rights, you can contact us by submitting a data subject access
-    request, by emailing us at PepeaAfri@gmail.com, or by referring to the contact
+    request, by emailing us at CHEZARANGIAfri@gmail.com, or by referring to the contact
     details at the bottom of this document.\r\n\r\nUnder certain US state data protection
     laws, you can designate an authorized agent to make a request on your behalf.
     We may deny a request from an authorized agent that does not submit proof that
@@ -6057,7 +6058,7 @@ MonoBehaviour:
     will need to provide a written and signed permission from you to submit such
     request on your behalf.\r\n\r\nAppeals\r\n\r\nUnder certain US state data protection
     laws, if we decline to take action regarding your request, you may appeal our
-    decision by emailing us at PepeaAfri@gmail.com. We will inform you in writing
+    decision by emailing us at CHEZARANGIAfri@gmail.com. We will inform you in writing
     of any action taken or not taken in response to the appeal, including a written
     explanation of the reasons for the decisions. If your appeal is denied, you may
     submit a complaint to your state attorney general.\r\n\r\nCalifornia \"Shine
@@ -6078,16 +6079,16 @@ MonoBehaviour:
     or by directly sending you a notification. We encourage you to review this privacy
     notice frequently to be informed of how we are protecting your information.\r\n\r\n11.
     HOW CAN YOU CONTACT US ABOUT THIS NOTICE?\r\n\r\nIf you have questions or comments
-    about this notice, you may email us at PepeaAfri@gmail.com or contact us by post
-    at:\r\n\r\nPepea\r\n__________\r\nNairobi, Nairobi\r\nKenya\r\n\r\n12. HOW CAN
-    YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?\r\n\r\nBased on the
-    applicable laws of your country or state of residence in the US, you may have
-    the right to request access to the personal information we collect from you,
-    details about how we have processed it, correct inaccuracies, or delete your
-    personal information. You may also have the right to withdraw your consent to
-    our processing of your personal information. These rights may be limited in some
-    circumstances by applicable law. To request to review, update, or delete your
-    personal information, please fill out and submit a data subject access request.\r\n\r\n"
+    about this notice, you may email us at CHEZARANGIAfri@gmail.com or contact us
+    by post at:\r\n\r\nCHEZARANGI\r\n__________\r\nNairobi, Nairobi\r\nKenya\r\n\r\n12.
+    HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?\r\n\r\nBased
+    on the applicable laws of your country or state of residence in the US, you may
+    have the right to request access to the personal information we collect from
+    you, details about how we have processed it, correct inaccuracies, or delete
+    your personal information. You may also have the right to withdraw your consent
+    to our processing of your personal information. These rights may be limited in
+    some circumstances by applicable law. To request to review, update, or delete
+    your personal information, please fill out and submit a data subject access request.\r\n"
 --- !u!222 &1058388139
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6801,8 +6802,8 @@ MonoBehaviour:
     you may have based on the electronic form of these Legal Terms and the lack of
     signing by the parties hereto to execute these Legal Terms.\r\n\r\n27. CONTACT
     US\r\n\r\nIn order to resolve a complaint regarding the Services or to receive
-    further information regarding use of the Services, please contact us at:\r\n\r\nPepea\r\nNairobi\r\nNairobi\r\nKenya\r\n
-    \r\nPepea@gmail.com\r\n"
+    further information regarding use of the Services, please contact us at:\r\n\r\nCHEZARANGI\r\nNairobi\r\nNairobi\r\nKenya\r\n
+    \r\nCHEZARANGI@gmail.com\r\n"
 --- !u!222 &1211683248
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8124,6 +8125,10 @@ MonoBehaviour:
   retryButton: {fileID: 1460077753}
   resumeButton: {fileID: 122767982}
   closePauseUIButton: {fileID: 1325686751}
+  isGameOver: 0
+  isGameWin: 0
+  isPause: 0
+  isStartGame: 0
 --- !u!4 &1458945761
 Transform:
   m_ObjectHideFlags: 0
@@ -8762,8 +8767,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2109851319}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.02307692}
-  m_AnchorMax: {x: 1, y: 0.07692307}
+  m_AnchorMin: {x: 0, y: 0.0076923072}
+  m_AnchorMax: {x: 1, y: 0.07692308}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9404,6 +9409,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644097298}
   m_CullTransparentMesh: 1
+--- !u!1 &1653278151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1653278152}
+  - component: {fileID: 1653278154}
+  - component: {fileID: 1653278153}
+  m_Layer: 5
+  m_Name: Text (Legacy) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1653278152
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653278151}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1887522086}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 720, y: -290}
+  m_SizeDelta: {x: 500, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1653278153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653278151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: cad99e3f587faff4fa2e20f02eb72af6, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: (just one more chance in life)
+--- !u!222 &1653278154
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653278151}
+  m_CullTransparentMesh: 1
 --- !u!1 &1679561053
 GameObject:
   m_ObjectHideFlags: 0
@@ -9684,7 +9768,7 @@ GameObject:
   - component: {fileID: 1717433354}
   - component: {fileID: 1717433353}
   m_Layer: 5
-  m_Name: Select Character Button
+  m_Name: Watch Ad To continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9707,7 +9791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 640, y: -202.5}
+  m_AnchoredPosition: {x: 720, y: -255}
   m_SizeDelta: {x: 250, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717433353
@@ -10055,161 +10139,162 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "PRIVACY POLICY\r\n\r\nLast updated July 20, 2024\r\n\r\nThis privacy notice
-    for Pepea (\"we,\" \"us,\" or \"our\"), describes how and why we might collect,
-    store, use, and/or share (\"process\") your information when you use our services
-    (\"Services\"), such as when you:\r\n\uF0A7\tDownload and use our mobile application
-    (Why me?), or any other application of ours that links to this privacy notice\r\n\uF0A7\tEngage
-    with us in other related ways, including any sales, marketing, or events\r\nQuestions
-    or concerns? Reading this privacy notice will help you understand your privacy
-    rights and choices. If you do not agree with our policies and practices, please
-    do not use our Services. If you still have any questions or concerns, please
-    contact us at PepeaAfri@gmail.com.\r\n\r\n\r\nSUMMARY OF KEY POINTS\r\n\r\nThis
-    summary provides key points from our privacy notice, but you can find out more
-    details about any of these topics by clicking the link following each key point
-    or by using our table of contents below to find the section you are looking for.\r\n\r\nWhat
-    personal information do we process? When you visit, use, or navigate our Services,
-    we may process personal information depending on how you interact with us and
-    the Services, the choices you make, and the products and features you use. Learn
-    more about personal information you disclose to us.\r\n\r\nDo we process any
-    sensitive personal information? We do not process sensitive personal information.\r\n\r\nDo
-    we collect any information from third parties? We do not collect any information
-    from third parties.\r\n\r\nHow do we process your information? We process your
-    information to provide, improve, and administer our Services, communicate with
-    you, for security and fraud prevention, and to comply with law. We may also process
-    your information for other purposes with your consent. We process your information
-    only when we have a valid legal reason to do so. Learn more about how we process
-    your information.\r\n\r\nIn what situations and with which parties do we share
-    personal information? We may share information in specific situations and with
-    specific third parties. Learn more about when and with whom we share your personal
-    information.\r\n\r\nHow do we keep your information safe? We have organizational
-    and technical processes and procedures in place to protect your personal information.
-    However, no electronic transmission over the internet or information storage
-    technology can be guaranteed to be 100% secure, so we cannot promise or guarantee
-    that hackers, cybercriminals, or other unauthorized third parties will not be
-    able to defeat our security and improperly collect, access, steal, or modify
-    your information. Learn more about how we keep your information safe.\r\n\r\nWhat
-    are your rights? Depending on where you are located geographically, the applicable
-    privacy law may mean you have certain rights regarding your personal information.
-    Learn more about your privacy rights.\r\n\r\nHow do you exercise your rights?
-    The easiest way to exercise your rights is by submitting a data subject access
-    request, or by contacting us. We will consider and act upon any request in accordance
-    with applicable data protection laws.\r\n\r\nWant to learn more about what we
-    do with any information we collect? Review the privacy notice in full.\r\n\r\n\r\nTABLE
-    OF CONTENTS\r\n\r\n1. WHAT INFORMATION DO WE COLLECT?\r\n2. HOW DO WE PROCESS
-    YOUR INFORMATION?\r\n3.\u2002WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL
-    INFORMATION?\r\n4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?\r\n5.
-    HOW LONG DO WE KEEP YOUR INFORMATION?\r\n6. HOW DO WE KEEP YOUR INFORMATION SAFE?\r\n7.
-    WHAT ARE YOUR PRIVACY RIGHTS?\r\n8. CONTROLS FOR DO-NOT-TRACK FEATURES\r\n9.
-    DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?\r\n10. DO OTHER REGIONS
-    HAVE SPECIFIC PRIVACY RIGHTS?\r\n11. DO WE MAKE UPDATES TO THIS NOTICE?\r\n12.
-    HOW CAN YOU CONTACT US ABOUT THIS NOTICE?\r\n13. HOW CAN YOU REVIEW, UPDATE,
-    OR DELETE THE DATA WE COLLECT FROM YOU?\r\n\r\n\r\n1. WHAT INFORMATION DO WE
-    COLLECT?\r\n\r\nPersonal information you disclose to us\r\n\r\nIn Short: We collect
-    personal information that you provide to us.\r\n\r\nWe collect personal information
-    that you voluntarily provide to us when you express an interest in obtaining
-    information about us or our products and Services, when you participate in activities
-    on the Services, or otherwise when you contact us.\r\n\r\nSensitive Information.
-    We do not process sensitive information.\r\n\r\nPayment Data. We may collect
-    data necessary to process your payment if you choose to make purchases, such
-    as your payment instrument number, and the security code associated with your
-    payment instrument. All payment data is handled and stored by google.com. You
-    may find their privacy notice link(s) here: __________.\r\n\r\nApplication Data.
-    If you use our application(s), we also may collect the following information
-    if you choose to provide us with access or permission:\r\n\uF0A7\tMobile Device
-    Data. We automatically collect device information (such as your mobile device
-    ID, model, and manufacturer), operating system, version information and system
-    configuration information, device and application identification numbers, browser
-    type and version, hardware model Internet service provider and/or mobile carrier,
-    and Internet Protocol (IP) address (or proxy server). If you are using our application(s),
-    we may also collect information about the phone network associated with your
-    mobile device, your mobile device\u2019s operating system or platform, the type
-    of mobile device you use, your mobile device\u2019s unique device ID, and information
-    about the features of our application(s) you accessed.\r\n\uF0A7\tPush Notifications.
-    We may request to send you push notifications regarding your account or certain
-    features of the application(s). If you wish to opt out from receiving these types
-    of communications, you may turn them off in your device's settings.\r\nThis information
-    is primarily needed to maintain the security and operation of our application(s),
-    for troubleshooting, and for our internal analytics and reporting purposes.\r\n\r\nAll
-    personal information that you provide to us must be true, complete, and accurate,
-    and you must notify us of any changes to such personal information.\r\n\r\nInformation
-    automatically collected\r\n\r\nIn Short: Some information \u2014 such as your
-    Internet Protocol (IP) address and/or browser and device characteristics \u2014
-    is collected automatically when you visit our Services.\r\n\r\nWe automatically
-    collect certain information when you visit, use, or navigate the Services. This
-    information does not reveal your specific identity (like your name or contact
-    information) but may include device and usage information, such as your IP address,
-    browser and device characteristics, operating system, language preferences, referring
-    URLs, device name, country, location, information about how and when you use
-    our Services, and other technical information. This information is primarily
-    needed to maintain the security and operation of our Services, and for our internal
-    analytics and reporting purposes.\r\n\r\nThe information we collect includes:\r\n\uF0A7\tLog
-    and Usage Data. Log and usage data is service-related, diagnostic, usage, and
-    performance information our servers automatically collect when you access or
-    use our Services and which we record in log files. Depending on how you interact
-    with us, this log data may include your IP address, device information, browser
-    type, and settings and information about your activity in the Services (such
-    as the date/time stamps associated with your usage, pages and files viewed, searches,
-    and other actions you take such as which features you use), device event information
-    (such as system activity, error reports (sometimes called \"crash dumps\"), and
-    hardware settings).\r\n\uF0A7\tDevice Data. We collect device data such as information
-    about your computer, phone, tablet, or other device you use to access the Services.
-    Depending on the device used, this device data may include information such as
-    your IP address (or proxy server), device and application identification numbers,
-    location, browser type, hardware model, Internet service provider and/or mobile
-    carrier, operating system, and system configuration information.\r\n\uF0A7\tLocation
-    Data. We collect location data such as information about your device's location,
-    which can be either precise or imprecise. How much information we collect depends
-    on the type and settings of the device you use to access the Services. For example,
-    we may use GPS and other technologies to collect geolocation data that tells
-    us your current location (based on your IP address). You can opt out of allowing
-    us to collect this information either by refusing access to the information or
-    by disabling your Location setting on your device. However, if you choose to
-    opt out, you may not be able to use certain aspects of the Services.\r\n\r\n2.
-    HOW DO WE PROCESS YOUR INFORMATION?\r\n\r\nIn Short: We process your information
-    to provide, improve, and administer our Services, communicate with you, for security
-    and fraud prevention, and to comply with law. We may also process your information
-    for other purposes with your consent.\r\n\r\nWe process your personal information
-    for a variety of reasons, depending on how you interact with our Services, including:\r\n\uF0A7\tTo
-    save or protect an individual's vital interest. We may process your information
-    when necessary to save or protect an individual\u2019s vital interest, such as
-    to prevent harm.\r\n\r\n3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?\r\n\r\nIn
-    Short: We only process your personal information when we believe it is necessary
-    and we have a valid legal reason (i.e., legal basis) to do so under applicable
-    law, like with your consent, to comply with laws, to provide you with services
-    to enter into or fulfill our contractual obligations, to protect your rights,
-    or to fulfill our legitimate business interests.\r\n\r\nIf you are located in
-    the EU or UK, this section applies to you.\r\n\r\nThe General Data Protection
-    Regulation (GDPR) and UK GDPR require us to explain the valid legal bases we
-    rely on in order to process your personal information. As such, we may rely on
-    the following legal bases to process your personal information:\r\n\uF0A7\tConsent.
-    We may process your information if you have given us permission (i.e., consent)
-    to use your personal information for a specific purpose. You can withdraw your
-    consent at any time. Learn more about withdrawing your consent.\r\n\uF0A7\tLegal
-    Obligations. We may process your information where we believe it is necessary
-    for compliance with our legal obligations, such as to cooperate with a law enforcement
-    body or regulatory agency, exercise or defend our legal rights, or disclose your
-    information as evidence in litigation in which we are involved.\r\n\uF0A7\tVital
-    Interests. We may process your information where we believe it is necessary to
-    protect your vital interests or the vital interests of a third party, such as
-    situations involving potential threats to the safety of any person.\r\nIf you
-    are located in Canada, this section applies to you.\r\n\r\nWe may process your
-    information if you have given us specific permission (i.e., express consent)
-    to use your personal information for a specific purpose, or in situations where
-    your permission can be inferred (i.e., implied consent). You can withdraw your
-    consent at any time.\r\n\r\nIn some exceptional cases, we may be legally permitted
-    under applicable law to process your information without your consent, including,
-    for example:\r\n\uF0A7\tIf collection is clearly in the interests of an individual
-    and consent cannot be obtained in a timely way\r\n\uF0A7\tFor investigations
-    and fraud detection and prevention\r\n\uF0A7\tFor business transactions provided
-    certain conditions are met\r\n\uF0A7\tIf it is contained in a witness statement
-    and the collection is necessary to assess, process, or settle an insurance claim\r\n\uF0A7\tFor
-    identifying injured, ill, or deceased persons and communicating with next of
-    kin\r\n\uF0A7\tIf we have reasonable grounds to believe an individual has been,
-    is, or may be victim of financial abuse\r\n\uF0A7\tIf it is reasonable to expect
-    collection and use with consent would compromise the availability or the accuracy
-    of the information and the collection is reasonable for purposes related to investigating
-    a breach of an agreement or a contravention of the laws of Canada or a province\r\n\uF0A7\tIf
+  m_Text: "PRIVACY POLICY\r\n\r\nLast updated July 20, 2024\r\n\r\n\r\n\r\nThis privacy
+    notice for CHEZARANGI (\"we,\" \"us,\" or \"our\"), describes how and why we
+    might collect, store, use, and/or share (\"process\") your information when you
+    use our services (\"Services\"), such as when you:\r\n\uF0A7\tDownload and use
+    our mobile application (Why me?), or any other application of ours that links
+    to this privacy notice\r\n\uF0A7\tEngage with us in other related ways, including
+    any sales, marketing, or events\r\nQuestions or concerns? Reading this privacy
+    notice will help you understand your privacy rights and choices. If you do not
+    agree with our policies and practices, please do not use our Services. If you
+    still have any questions or concerns, please contact us at CHEZARANGIAfri@gmail.com.\r\n\r\n\r\nSUMMARY
+    OF KEY POINTS\r\n\r\nThis summary provides key points from our privacy notice,
+    but you can find out more details about any of these topics by clicking the link
+    following each key point or by using our table of contents below to find the
+    section you are looking for.\r\n\r\nWhat personal information do we process?
+    When you visit, use, or navigate our Services, we may process personal information
+    depending on how you interact with us and the Services, the choices you make,
+    and the products and features you use. Learn more about personal information
+    you disclose to us.\r\n\r\nDo we process any sensitive personal information?
+    We do not process sensitive personal information.\r\n\r\nDo we collect any information
+    from third parties? We do not collect any information from third parties.\r\n\r\nHow
+    do we process your information? We process your information to provide, improve,
+    and administer our Services, communicate with you, for security and fraud prevention,
+    and to comply with law. We may also process your information for other purposes
+    with your consent. We process your information only when we have a valid legal
+    reason to do so. Learn more about how we process your information.\r\n\r\nIn
+    what situations and with which parties do we share personal information? We may
+    share information in specific situations and with specific third parties. Learn
+    more about when and with whom we share your personal information.\r\n\r\nHow
+    do we keep your information safe? We have organizational and technical processes
+    and procedures in place to protect your personal information. However, no electronic
+    transmission over the internet or information storage technology can be guaranteed
+    to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals,
+    or other unauthorized third parties will not be able to defeat our security and
+    improperly collect, access, steal, or modify your information. Learn more about
+    how we keep your information safe.\r\n\r\nWhat are your rights? Depending on
+    where you are located geographically, the applicable privacy law may mean you
+    have certain rights regarding your personal information. Learn more about your
+    privacy rights.\r\n\r\nHow do you exercise your rights? The easiest way to exercise
+    your rights is by submitting a data subject access request, or by contacting
+    us. We will consider and act upon any request in accordance with applicable data
+    protection laws.\r\n\r\nWant to learn more about what we do with any information
+    we collect? Review the privacy notice in full.\r\n\r\n\r\nTABLE OF CONTENTS\r\n\r\n1.
+    WHAT INFORMATION DO WE COLLECT?\r\n2. HOW DO WE PROCESS YOUR INFORMATION?\r\n3.\u2002WHAT
+    LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?\r\n4. WHEN AND
+    WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?\r\n5. HOW LONG DO WE KEEP YOUR
+    INFORMATION?\r\n6. HOW DO WE KEEP YOUR INFORMATION SAFE?\r\n7. WHAT ARE YOUR
+    PRIVACY RIGHTS?\r\n8. CONTROLS FOR DO-NOT-TRACK FEATURES\r\n9. DO UNITED STATES
+    RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?\r\n10. DO OTHER REGIONS HAVE SPECIFIC
+    PRIVACY RIGHTS?\r\n11. DO WE MAKE UPDATES TO THIS NOTICE?\r\n12. HOW CAN YOU
+    CONTACT US ABOUT THIS NOTICE?\r\n13. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE
+    DATA WE COLLECT FROM YOU?\r\n\r\n\r\n1. WHAT INFORMATION DO WE COLLECT?\r\n\r\nPersonal
+    information you disclose to us\r\n\r\nIn Short: We collect personal information
+    that you provide to us.\r\n\r\nWe collect personal information that you voluntarily
+    provide to us when you express an interest in obtaining information about us
+    or our products and Services, when you participate in activities on the Services,
+    or otherwise when you contact us.\r\n\r\nSensitive Information. We do not process
+    sensitive information.\r\n\r\nPayment Data. We may collect data necessary to
+    process your payment if you choose to make purchases, such as your payment instrument
+    number, and the security code associated with your payment instrument. All payment
+    data is handled and stored by google.com. You may find their privacy notice link(s)
+    here: __________.\r\n\r\nApplication Data. If you use our application(s), we
+    also may collect the following information if you choose to provide us with access
+    or permission:\r\n\uF0A7\tMobile Device Data. We automatically collect device
+    information (such as your mobile device ID, model, and manufacturer), operating
+    system, version information and system configuration information, device and
+    application identification numbers, browser type and version, hardware model
+    Internet service provider and/or mobile carrier, and Internet Protocol (IP) address
+    (or proxy server). If you are using our application(s), we may also collect information
+    about the phone network associated with your mobile device, your mobile device\u2019s
+    operating system or platform, the type of mobile device you use, your mobile
+    device\u2019s unique device ID, and information about the features of our application(s)
+    you accessed.\r\n\uF0A7\tPush Notifications. We may request to send you push
+    notifications regarding your account or certain features of the application(s).
+    If you wish to opt out from receiving these types of communications, you may
+    turn them off in your device's settings.\r\nThis information is primarily needed
+    to maintain the security and operation of our application(s), for troubleshooting,
+    and for our internal analytics and reporting purposes.\r\n\r\nAll personal information
+    that you provide to us must be true, complete, and accurate, and you must notify
+    us of any changes to such personal information.\r\n\r\nInformation automatically
+    collected\r\n\r\nIn Short: Some information \u2014 such as your Internet Protocol
+    (IP) address and/or browser and device characteristics \u2014 is collected automatically
+    when you visit our Services.\r\n\r\nWe automatically collect certain information
+    when you visit, use, or navigate the Services. This information does not reveal
+    your specific identity (like your name or contact information) but may include
+    device and usage information, such as your IP address, browser and device characteristics,
+    operating system, language preferences, referring URLs, device name, country,
+    location, information about how and when you use our Services, and other technical
+    information. This information is primarily needed to maintain the security and
+    operation of our Services, and for our internal analytics and reporting purposes.\r\n\r\nThe
+    information we collect includes:\r\n\uF0A7\tLog and Usage Data. Log and usage
+    data is service-related, diagnostic, usage, and performance information our servers
+    automatically collect when you access or use our Services and which we record
+    in log files. Depending on how you interact with us, this log data may include
+    your IP address, device information, browser type, and settings and information
+    about your activity in the Services (such as the date/time stamps associated
+    with your usage, pages and files viewed, searches, and other actions you take
+    such as which features you use), device event information (such as system activity,
+    error reports (sometimes called \"crash dumps\"), and hardware settings).\r\n\uF0A7\tDevice
+    Data. We collect device data such as information about your computer, phone,
+    tablet, or other device you use to access the Services. Depending on the device
+    used, this device data may include information such as your IP address (or proxy
+    server), device and application identification numbers, location, browser type,
+    hardware model, Internet service provider and/or mobile carrier, operating system,
+    and system configuration information.\r\n\uF0A7\tLocation Data. We collect location
+    data such as information about your device's location, which can be either precise
+    or imprecise. How much information we collect depends on the type and settings
+    of the device you use to access the Services. For example, we may use GPS and
+    other technologies to collect geolocation data that tells us your current location
+    (based on your IP address). You can opt out of allowing us to collect this information
+    either by refusing access to the information or by disabling your Location setting
+    on your device. However, if you choose to opt out, you may not be able to use
+    certain aspects of the Services.\r\n\r\n2. HOW DO WE PROCESS YOUR INFORMATION?\r\n\r\nIn
+    Short: We process your information to provide, improve, and administer our Services,
+    communicate with you, for security and fraud prevention, and to comply with law.
+    We may also process your information for other purposes with your consent.\r\n\r\nWe
+    process your personal information for a variety of reasons, depending on how
+    you interact with our Services, including:\r\n\uF0A7\tTo save or protect an individual's
+    vital interest. We may process your information when necessary to save or protect
+    an individual\u2019s vital interest, such as to prevent harm.\r\n\r\n3. WHAT
+    LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?\r\n\r\nIn Short: We only
+    process your personal information when we believe it is necessary and we have
+    a valid legal reason (i.e., legal basis) to do so under applicable law, like
+    with your consent, to comply with laws, to provide you with services to enter
+    into or fulfill our contractual obligations, to protect your rights, or to fulfill
+    our legitimate business interests.\r\n\r\nIf you are located in the EU or UK,
+    this section applies to you.\r\n\r\nThe General Data Protection Regulation (GDPR)
+    and UK GDPR require us to explain the valid legal bases we rely on in order to
+    process your personal information. As such, we may rely on the following legal
+    bases to process your personal information:\r\n\uF0A7\tConsent. We may process
+    your information if you have given us permission (i.e., consent) to use your
+    personal information for a specific purpose. You can withdraw your consent at
+    any time. Learn more about withdrawing your consent.\r\n\uF0A7\tLegal Obligations.
+    We may process your information where we believe it is necessary for compliance
+    with our legal obligations, such as to cooperate with a law enforcement body
+    or regulatory agency, exercise or defend our legal rights, or disclose your information
+    as evidence in litigation in which we are involved.\r\n\uF0A7\tVital Interests.
+    We may process your information where we believe it is necessary to protect your
+    vital interests or the vital interests of a third party, such as situations involving
+    potential threats to the safety of any person.\r\nIf you are located in Canada,
+    this section applies to you.\r\n\r\nWe may process your information if you have
+    given us specific permission (i.e., express consent) to use your personal information
+    for a specific purpose, or in situations where your permission can be inferred
+    (i.e., implied consent). You can withdraw your consent at any time.\r\n\r\nIn
+    some exceptional cases, we may be legally permitted under applicable law to process
+    your information without your consent, including, for example:\r\n\uF0A7\tIf
+    collection is clearly in the interests of an individual and consent cannot be
+    obtained in a timely way\r\n\uF0A7\tFor investigations and fraud detection and
+    prevention\r\n\uF0A7\tFor business transactions provided certain conditions are
+    met\r\n\uF0A7\tIf it is contained in a witness statement and the collection is
+    necessary to assess, process, or settle an insurance claim\r\n\uF0A7\tFor identifying
+    injured, ill, or deceased persons and communicating with next of kin\r\n\uF0A7\tIf
+    we have reasonable grounds to believe an individual has been, is, or may be victim
+    of financial abuse\r\n\uF0A7\tIf it is reasonable to expect collection and use
+    with consent would compromise the availability or the accuracy of the information
+    and the collection is reasonable for purposes related to investigating a breach
+    of an agreement or a contravention of the laws of Canada or a province\r\n\uF0A7\tIf
     disclosure is required to comply with a subpoena, warrant, court order, or rules
     of the court relating to the production of records\r\n\uF0A7\tIf it was produced
     by an individual in the course of their employment, business, or profession and
@@ -10479,8 +10564,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1544511970}
   m_HandleRect: {fileID: 1544511969}
   m_Direction: 2
-  m_Value: 0.024390241
-  m_Size: 0.05384615
+  m_Value: 0.008264462
+  m_Size: 0.06923077
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11125,12 +11210,13 @@ RectTransform:
   m_Children:
   - {fileID: 202938547}
   - {fileID: 1717433352}
+  - {fileID: 1653278152}
   m_Father: {fileID: 951373785}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 250}
+  m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1887522087
 MonoBehaviour:
@@ -11150,7 +11236,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 60
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -11682,8 +11768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 250, y: 280}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 200, y: 250}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2062351632
 MonoBehaviour:
@@ -11705,7 +11791,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aad7257a886a1c04cb20b69c997316d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4218bec15f54c254fa22f86e9c8753fd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
